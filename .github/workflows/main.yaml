@@ -30,7 +30,7 @@ jobs:
             -   name: Install dependencies
                 run: yarn install
             -   name: Build Prod
-                run: yarn run ng build --prod --aot
+                run: yarn run ng build --prod --aot --base-href=${{ secrets.BASE_HREF }}
             -   name: Archive build
                 if: success()
                 uses: actions/upload-artifact@v1
