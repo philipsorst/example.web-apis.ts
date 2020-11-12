@@ -1,0 +1,5 @@
+@import "~@dontdrinkandroot/ngx-material-extensions/style";
+
+.mat-toolbar {
+    @extend .mat-elevation-z1;
+}
