@@ -12,20 +12,39 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {IndexComponent} from './index/index.component';
+import {WebSpeechSynthesisComponent} from './web-speech/web-speech-synthesis.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [
         AppComponent,
-        IndexComponent
+        IndexComponent,
+        WebSpeechSynthesisComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
         ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
-        MatToolbarModule,
+        MatButtonModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
         MatListModule,
+        MatSelectModule,
         MatSidenavModule,
+        MatSliderModule,
+        MatSnackBarModule,
+        MatToolbarModule,
         DdrExtensionsModule,
         DdrMaterialExtensionsModule
     ],

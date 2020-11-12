@@ -1,0 +1,27 @@
+<mat-toolbar>
+    <h1>Speech Synthesis</h1>
+</mat-toolbar>
+
+<mat-card>
+    <mat-card-content class="d-flex flex-column">
+        <mat-form-field>
+            <mat-label>Voice</mat-label>
+            <mat-select [(ngModel)]="voice" name="voice">
+                <mat-option *ngFor="let voice of voices" [value]="voice">
+                    {{voice.name}} ({{voice.lang}})
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Text</mat-label>
+            <textarea matInput [(ngModel)]="text" name="text"></textarea>
+        </mat-form-field>
+        <p class="mb-0">Rate</p>
+        <mat-slider thumbLabel min="0.5" max="2" step="0.1" [(ngModel)]="rate" name="rate"></mat-slider>
+        <p class="mb-0">Pitch</p>
+        <mat-slider thumbLabel min="0.5" max="2" step="0.1" [(ngModel)]="pitch" name="pitch"></mat-slider>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="primary" (click)="speak()">Speak</button>
+    </mat-card-actions>
+</mat-card>

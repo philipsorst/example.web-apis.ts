@@ -2,11 +2,13 @@
     <div slot="mat-sidenav">
         <mat-toolbar>
             <h1>Web API Examples</h1>
-            <mat-nav-list>
-            </mat-nav-list>
         </mat-toolbar>
+        <mat-nav-list>
+            <h3 matSubheader>Web Speech Api</h3>
+            <mat-list-item [routerLink]="['/web-speech', 'synthesis']">Synthesis</mat-list-item>
+        </mat-nav-list>
     </div>
     <div slot="mat-sidenav-content">
-       <router-outlet></router-outlet>
+        <router-outlet></router-outlet>
     </div>
 </ddr-mat-sidenav-container>
