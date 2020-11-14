@@ -21,12 +21,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {GeoLocationComponent} from './geo-location/geo-location.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         IndexComponent,
         WebSpeechSynthesisComponent,
+        GeoLocationComponent,
     ],
     imports: [
         BrowserModule,

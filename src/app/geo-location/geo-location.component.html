@@ -1,0 +1,83 @@
+<mat-toolbar>
+    <ddr-mat-sidenav-toggle></ddr-mat-sidenav-toggle>
+    <h1>Geolocation</h1>
+</mat-toolbar>
+
+<mat-card *ngIf="currentPosition" class="mb-3">
+    <mat-card-title>Current</mat-card-title>
+    <mat-list>
+        <mat-list-item>
+            <div matLine>Timestamp</div>
+            <div matLine>{{currentPosition.timestamp|date:'full'}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Latitude</div>
+            <div matLine>{{currentPosition.coords.latitude}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Longitude</div>
+            <div matLine>{{currentPosition.coords.longitude}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Accuracy</div>
+            <div matLine>{{currentPosition.coords.accuracy|number}}m</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Altitude</div>
+            <div matLine>{{currentPosition.coords.altitude}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>AltitudeAccuracy</div>
+            <div matLine>{{currentPosition.coords.altitudeAccuracy}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Heading</div>
+            <div matLine>{{currentPosition.coords.heading}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Speed</div>
+            <div matLine>{{currentPosition.coords.speed}}</div>
+        </mat-list-item>
+    </mat-list>
+    <mat-card-actions>
+        <button mat-flat-button color="primary" (click)="getCurrentPosition()">Refresh</button>
+    </mat-card-actions>
+</mat-card>
+
+<mat-card *ngIf="watchPosition">
+    <mat-card-title>Watch</mat-card-title>
+    <mat-list>
+        <mat-list-item>
+            <div matLine>Timestamp</div>
+            <div matLine>{{watchPosition.timestamp|date:'full'}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Latitude</div>
+            <div matLine>{{watchPosition.coords.latitude}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Longitude</div>
+            <div matLine>{{watchPosition.coords.longitude}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Accuracy</div>
+            <div matLine>{{watchPosition.coords.accuracy|number}}m</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Altitude</div>
+            <div matLine>{{watchPosition.coords.altitude}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>AltitudeAccuracy</div>
+            <div matLine>{{watchPosition.coords.altitudeAccuracy}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Heading</div>
+            <div matLine>{{watchPosition.coords.heading}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <div matLine>Speed</div>
+            <div matLine>{{watchPosition.coords.speed}}</div>
+        </mat-list-item>
+    </mat-list>
+</mat-card>
