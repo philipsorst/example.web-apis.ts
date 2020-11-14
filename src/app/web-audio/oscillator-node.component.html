@@ -1,0 +1,33 @@
+<mat-toolbar>
+    <ddr-mat-sidenav-toggle></ddr-mat-sidenav-toggle>
+    <h1>Oscillator Node</h1>
+</mat-toolbar>
+
+<mat-card>
+    <mat-card-content class="d-flex flex-column">
+        <mat-form-field>
+            <mat-label>Type</mat-label>
+            <mat-select [ngModel]="type" name="voice" (valueChange)="setType($event)">
+                <mat-option *ngFor="let type of types" [value]="type">
+                    {{type}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="mat-title">Frequency</div>
+        <mat-slider thumbLabel
+                    [min]="0"
+                    [max]="28160"
+                    [ngModel]="frequency"
+                    (valueChange)="setFrequency($event)"></mat-slider>
+        <div class="mat-title">Detune</div>
+        <mat-slider thumbLabel
+                    [min]="0"
+                    [max]="100"
+                    [ngModel]="detune"
+                    (valueChange)="setDetune($event)"></mat-slider>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-flat-button (click)="stop()" color="primary">Stop</button>
+    </mat-card-actions>
+</mat-card>
+

@@ -22,6 +22,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {GeoLocationComponent} from './geo-location/geo-location.component';
+import {OscillatorNodeComponent} from './web-audio/oscillator-node.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +30,7 @@ import {GeoLocationComponent} from './geo-location/geo-location.component';
         IndexComponent,
         WebSpeechSynthesisComponent,
         GeoLocationComponent,
+        OscillatorNodeComponent,
     ],
     imports: [
         BrowserModule,
