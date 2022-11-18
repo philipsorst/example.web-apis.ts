@@ -7,9 +7,9 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class GeoLocationComponent implements OnInit, OnDestroy
 {
-    public currentPosition: Position;
+    public currentPosition: GeolocationPosition;
 
-    public watchPosition: Position;
+    public watchPosition: GeolocationPosition;
 
     private watchId: number;
 
